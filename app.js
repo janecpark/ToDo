@@ -6,6 +6,7 @@ const spans = document.querySelectorAll('span')
 const save = document.querySelector('#save')
 
 load();
+deleteTodo()
 
 form.addEventListener('submit', function(e){
     e.preventDefault()
@@ -15,8 +16,6 @@ form.addEventListener('submit', function(e){
     newTodo.innerHTML = `<span><i class="fa fa-trash" aria-hidden="true"></i></span>${todoValue}`;
     ul.appendChild(newTodo)
 });
-
-
 
 ul.addEventListener('click', function(e){
     if(e.target.tagName === 'LI'){
@@ -42,7 +41,7 @@ function load(){
         deleteTodo();
     }
 }
-deleteTodo()
+
 
 
 
